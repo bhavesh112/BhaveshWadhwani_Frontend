@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <canvas id="myChart"></canvas>
+    </div>
+    <div class="col-lg-3 form-control">
+      <p>Enter height to see the Graph</p>
+      <label>
+        Enter Height :
+        <input type="text" (input)="onChangeHeight($event)" value=""
+      /></label>
+      <label>
+        Enter bounces :
+        <input type="text" (input)="onChangeBounces($event)" value="1"
+      /></label>
+      <label> Coefficient of Restitution :</label>
+      <input
+        type="range"
+        min="0"
+        max="1"
+        step="0.1"
+        value="0.5"
+        (input)="onChangeE($event)"
+      />
+      <p>{{Coefficient}}</p>
+    </div>
+  </div>
+</div>
